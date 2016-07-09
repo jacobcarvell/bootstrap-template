@@ -1,0 +1,339 @@
+/* Set up the template variables */
+// fonts
+base-font-size = 1em
+
+// colours
+
+main-colour = #343434  //try #383A3F
+accent-colour = #E6AE49  //try #F6B352
+secondary-accent = #808C6C
+background-colour = white //try #F5F1DA or #FFFFF2
+secondary-background = #F5F5F5
+
+/* Set the basic rules */
+
+body
+    width: 100%
+    height: 100%
+    color: main-colour
+    font-size: 1.5em
+    font-family: 'Lato', sans-serif
+    font-weight: 300
+    background-color: background-colour
+
+    a
+        color: accent-colour
+
+        &:hover
+            color: secondary-accent
+
+    h1, h2, h3
+        letter-spacing: 3px
+        text-transform: uppercase
+
+    h1
+        font-weight: 400
+
+    h2, h3
+        font-weight: 600
+
+    .spacer
+        margin: 50px 0 50px 0
+
+    @media (min-width: 768px)
+        .spacer
+            margin: 100px 0 150px 0
+
+/* Specific Rules */
+
+/* Navbar Rules */
+.navbar-custom
+    font-weight: 500
+    margin-bottom: 0
+    padding: 5px 0
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+
+    a
+        color: main-colour
+
+        &:hover, &:focus
+            color: accent-colour
+            -webkit-transition: all 0.2s ease-in-out
+            -moz-transition: all 0.2s ease-in-out
+            transition: all 0.2s ease-in-out
+
+    .navbar-toggle
+        color: main-colour
+
+    .navbar-brand
+        font-weight: 700
+
+    .logo
+        height: 30px
+        transform: translate(0,-15%)
+        -ms-transform: translate(0,-15%) /* IE 9 */
+   	    -webkit-transform: translate(0,-15%) /* Safari */
+
+@media (min-width: 768px)
+    .navbar-custom
+        padding: 30px 0
+        border-bottom: none
+        letter-spacing: 1px
+        background: transparent
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0);
+        -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0);
+        -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0);
+        -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out
+        -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out
+        transition: background 0.5s ease-in-out, padding 0.5s ease-in-out
+
+    .top-nav-collapse
+        padding: 5px 0
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+
+/* Intro Rules */
+.intro
+    display: table
+    width: 100%
+    height: 100vh
+    padding: 100px 0
+    text-align: center
+    color: main-colour
+    background-image: url(../images/test-bg.jpg)
+    background-color: background-colour
+    background-repeat: no-repeat
+    background-attachment: scroll
+    background-size:cover
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+
+    .intro-body
+        display: table-cell
+        vertical-align: middle
+        // transform: translate(0,-17%)
+        // -ms-transform: translate(0,-17%) /* IE 9 */
+   	    // -webkit-transform: translate(0,-17%) /* Safari */
+        animation: fadein 4s;
+        -moz-animation: fadein 4s; /* Firefox */
+        -webkit-animation: fadein 4s; /* Safari and Chrome */
+        -o-animation: fadein 4s; /* Opera */
+
+        .brand-heading
+            font-size: 40px
+
+        .intro-text
+            font-size: 18px
+
+@media (min-width: 768px)
+  .intro
+    height: 100vh
+    padding: 0
+
+    .intro-body
+        .brand-heading
+            font-size: 100px
+
+        .intro-text
+            font-size: 26px
+
+/* Keyframes for animation */
+@keyframes fadein
+    from
+        opacity:0
+
+    to
+        opacity:1
+
+@-moz-keyframes fadein /* Firefox */
+    from
+        opacity:0
+
+    to
+        opacity:1
+
+@-webkit-keyframes fadein /* Safari and Chrome */
+    from
+        opacity:0
+
+    to
+        opacity:1
+
+
+@-o-keyframes fadein /* Opera */
+    from
+        opacity:0
+
+    to
+        opacity: 1
+
+/* About Rules */
+#about
+    .container
+        display: -ms-flex
+        display: -webkit-flex
+        display: flex
+        align-items: center
+
+        .vertical-centre
+            flex: 1
+
+.seperator
+    padding: 150px 0 150px 0
+    border-bottom: 1px solid #f0f0f0
+
+    h2
+        text-align: left
+    p
+        text-align: left
+
+.seperator-bottom
+    margin: 200px 0 200px 0
+
+.feature-img
+    font-size: 10em
+    text-align: center
+
+/* Pricing Rules */
+
+.pricing
+	text-align: center
+	border: 1px solid #f0f0f0
+	color: main-colour
+	padding-left: 0
+	margin-bottom: 30px
+
+.pricing
+    img
+    	display: block
+    	margin: auto
+    	width: 32px
+
+    big
+    	font-size: 2.2em
+
+    h3
+        margin-bottom: 0
+        font-size: 2.5em
+        font-weight: 600
+        letter-spacing: 3px
+
+    span
+    	font-size: 0.9em
+    	color: main-colour
+    	font-weight: 300
+
+    button
+        width: auto
+        margin: auto
+        font-size: 1em
+        font-weight: 600
+        letter-spacing: 3px
+        border-radius: 50px
+        color: #fff
+        padding: 9px 24px
+        background: #aaa
+        opacity: 1
+        transition: opacity .2s ease
+        border: none
+        outline: none
+
+        &:hover
+            opacity: .6
+
+        &:active
+            box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.1)
+
+    li
+        list-style: none
+        padding: 13px
+
+        &:first-child, &:last-child
+            border-bottom: 1px solid #f0f0f0
+            padding: 20px 13px
+
+        &:nth-last-child(2)
+            padding: 30px 13px 0 13px
+
+/* pricing color */
+.p-green big,
+.p-green h3
+	color: #4c7737
+
+.p-green button
+	background: #4c7737
+
+.p-yel big,
+.p-yel h3
+	color: #ffbb42
+
+.p-yel button
+	background: #ffbb42
+
+.p-blue big,
+.p-blue h3
+	color: #3f4bb8
+
+.p-blue button
+	background: #3f4bb8
+
+/* Footer Rules */
+.footer
+    background-color: secondary-background
+    text-align: center
+    padding: 30px 0 30px 0
+
+    ul
+        padding: 0
+        margin: 0
+
+    li
+        list-style: none
+
+    .logo-readme
+        margin: 0
+        padding: 20px
+
+        img
+            height: 100%
+            width: 50vw
+
+    .link-list-one, .link-list-two
+        margin: 0
+        padding: 0
+
+    .footer-contact
+        margin: 0
+        padding: 30px 5px
+
+    .copyright
+        text-align: center;
+
+    @media (min-width: 768px)
+        text-align: left
+
+        .logo-readme
+            img
+                height: 30px
+                width: auto
+
+            p
+                margin: 0
+                padding: 20px 0 0 0
+
+        .link-list-one, .link-list-two
+            margin: 0
+            padding: 40px
+
+        .footer-contact
+            margin: 0
+            padding: 40px 20px 40px 0
+
+            span
+                font-size: 0.8em
