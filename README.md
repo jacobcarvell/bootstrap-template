@@ -1,6 +1,7 @@
 # nameless - the minimal bootstrap template
 This nameless template is built on bootstrap using stylus for css preproccesing. Stylus is of course completely optional but it does make it easy to change the theme with variables at the top of the css.
 The purpose of this template is be as minimal as possible using the least amount of libraries. Keeping  the code as simple and clean as possible. Do whatever you would like with it.
+Check out a live demo [here](https://jacobcarvell.github.io/nameless-web-template/)
 
 ## Theme screenshot
 
